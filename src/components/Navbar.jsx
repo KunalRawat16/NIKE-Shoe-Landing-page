@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "motion/react"
 import { FiMenu , FiX } from "react-icons/fi";
 import logo from "../assets/brand_logo.png";
 

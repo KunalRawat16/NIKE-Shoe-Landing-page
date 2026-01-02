@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import { FaShoppingBag } from "react-icons/fa";
 import shoe from "../assets/shoe_image.png";
 import flipkart from "../assets/flipkart.png";
@@ -7,9 +8,13 @@ import amazon from "../assets/amazon.png";
 const Hero = () => {
   return (
     <main className="flex flex-col md:flex-row items-center px-4 md:px-16 py-8">
-      
       {/* Left section */}
-      <section className="w-full md:w-3/6 text-center md:text-left order-2 md:order-1 ">
+      <motion.section
+        className="w-full md:w-3/6 text-center md:text-left order-2 md:order-1 "
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-4xl md:text-8xl font-bold text-black">
           YOUR FEET DESERVE THE BEST
         </h1>
@@ -36,13 +41,17 @@ const Hero = () => {
             <img className="h-8 cursor-pointer" src={amazon} alt="amazon" />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Right section */}
-      <section className="w-full md:w-3/6 pt-8 md:pt-0 flex justify-center order-1 md:order-2">
+      <motion.section
+        className="w-full md:w-3/6 pt-8 md:pt-0 flex justify-center order-1 md:order-2"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <img className="w-72 md:w-full" src={shoe} alt="shoe" />
-      </section>
-
+      </motion.section>
     </main>
   );
 };
