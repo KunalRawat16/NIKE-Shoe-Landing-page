@@ -6,6 +6,7 @@ import amazon from "../assets/amazon.png";
 
 const Hero = () => {
   return (
+    
     <main className="flex flex-col md:flex-row items-center px-4 md:px-16 py-8">
       
       {/* Left section */}
